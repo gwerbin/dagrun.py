@@ -1,0 +1,30 @@
+= dagrun.py
+
+This is a lightweight task/DAG runner that can be added as a standalone script, using only the Python standard library.
+
+Requires Python 3.9+.
+
+== Installation
+
+TODO: Upload to PyPI.
+
+You can install this as a standalone script within your project by either copying `+dagrun.py+` from this repository, or by installing with `+pip install+` and using the `+dagrun-install+` script to export `+dagrun.py+` as an executable with a shebang, which can be invoked as `+python ./dagrun.py+`, or as `+./dagrun.py+` on Unix-like systems.
+
+== Dev setup
+
+Requires GNU Make.
+
+[,shell]
+----
+git clone https://git.sr.ht/~wintershadows/dagrun.py
+cd dagrun.py
+make setup
+----
+
+For push access with `+make git-push+`:
+
+[,shell]
+----
+git remote set-url origin 'git@git.sr.ht:~wintershadows/dagrun.py'
+git remote add github-mirror 'git@github.com:gwerbin/dagrun.py.git'
+----
