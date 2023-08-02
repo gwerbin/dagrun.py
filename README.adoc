@@ -6,8 +6,6 @@ Requires Python 3.9+.
 
 == Installation
 
-TODO: Upload to PyPI.
-
 You can install this as a standalone script within your project by either copying `+dagrun.py+` from this repository, or by installing with `+pip install+` and using the `+dagrun-install+` script to export `+dagrun.py+` as an executable with a shebang, which can be invoked as `+python ./dagrun.py+`, or as `+./dagrun.py+` on Unix-like systems.
 
 == Dev setup
@@ -28,3 +26,18 @@ For push access with `+make git-push+`:
 git remote set-url origin 'git@git.sr.ht:~wintershadows/dagrun.py'
 git remote add github-mirror 'git@github.com:gwerbin/dagrun.py.git'
 ----
+
+== To-do / roadmap
+
+* Tests.
+* PyPI upload.
+* Better docs/instructions.
+* Think more about `+ExecTask+` interface. Too clunky?
+* Add `+PythonTask+` for running Python code
+* Add other specialized tasks for Python projects?
+* Add support for outputs and dependencies as well as other ways to check for success/failure beyond exit code.
+* Support multiple DAGs in the same file.
+* Confirm that `+dagrun-install+` actually works right on Windows.
+* Coherent versioning system.
+* YAML-based file format in addition to Python scripts.
+* Some kind of logging and nicer-looking output.
