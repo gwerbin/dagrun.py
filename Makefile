@@ -13,7 +13,7 @@ build:
 typecheck:
 	.venv/bin/mypy
 
-.PHONY: push-git
-push-git:
+.PHONY: git-push
+git-push:
 	git push origin
 	git push github-mirror
