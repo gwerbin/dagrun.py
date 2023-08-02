@@ -64,7 +64,7 @@ class ShellTask:
 @dataclass(frozen=True)
 class ExecTask:
     command: SystemCommand
-    arguments: Sequence[SystemArgument]
+    arguments: Sequence[SystemArgument] = ()
 
     def run(self) -> subprocess.CompletedProcess[Any]:
         cproc = subprocess.run([self.command, *self.arguments])
