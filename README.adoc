@@ -41,3 +41,4 @@ git remote add github-mirror 'git@github.com:gwerbin/dagrun.py.git'
 * Coherent versioning system.
 * YAML-based file format in addition to Python scripts.
 * Some kind of logging and nicer-looking output.
+* Set README in Sourcehut: https://man.sr.ht/git.sr.ht/#setting-a-custom-readme
