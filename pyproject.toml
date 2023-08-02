@@ -1,0 +1,27 @@
+[build-system]
+requires = ['setuptools', 'setuptools-scm']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'dagrun'
+version = '0.1.0'
+
+requires-python = '>= 3.9'
+# graphlib             >= 3.9
+# typing.Self          >= 3.11
+# | syntax for types   >= 3.10
+# dataclass slots=True >= 3.10
+# match/case syntax    >= 3.10
+
+description = 'Lightweight, dependency-free task/DAG runner that can be added as a standalone script.'
+
+[project.scripts]
+dagrun-install = 'dagrun_install:main'
+dagrun = 'dagrun:main'
+
+[tool.setuptools]
+py-modules = ['dagrun', 'dagrun_install']
+
+[tool.mypy]
+files = ['dagrun.py']
+strict = true
