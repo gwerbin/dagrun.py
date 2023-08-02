@@ -1,9 +1,6 @@
 .PHONY: setup-dev
 setup-dev:
-	python -m venv .venv
-	.venv/bin/python -m pip install -U pip
-	.venv/bin/pip install -r requirements-dev.txt
-	.venv/bin/pip install -e .
+	python ./dagrun.py -f dags/setup_dev.py
 
 .PHONY: build
 build:
