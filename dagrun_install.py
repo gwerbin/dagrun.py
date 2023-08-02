@@ -1,6 +1,7 @@
 r"""Installer for dagrun.py"""
 
 import os
+import platform
 import stat
 import sys
 from argparse import ArgumentParser
@@ -34,13 +35,14 @@ def main() -> int | None:
         with dest.open("w") as fp:
             fp.write(code)
         # os.chmod(dest, 0o755)
-        perm = (
-            stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR |
-            stat.S_IRGRP | stat.S_IXGRP |
-            stat.S_IROTH | stat.S_IXOTH
-        )
-        print(perm)
-        os.chmod(dest, perm)
+        if platform.system() != "Windows":
+            perm = (
+                stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR |
+                stat.S_IRGRP | stat.S_IXGRP |
+                stat.S_IROTH | stat.S_IXOTH
+            )
+            print(perm)
+            os.chmod(dest, perm)
 
     return None
 
