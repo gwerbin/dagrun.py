@@ -1,8 +1,8 @@
-from dagrun import ExecTask, Graph
+from dagrun import ExecTask, ShellTask, Graph
 
 task1 = ExecTask("echo", ("a", "b"))
 task2 = ExecTask("pwd", ())
-task3 = ExecTask("sh", ("-c", "head -c5 </dev/urandom | wc -c"))
+task3 = ShellTask("head -c5 </dev/urandom | wc -c")
 task4 = ExecTask("echo", ("done",))
 
 graph = Graph.build([
