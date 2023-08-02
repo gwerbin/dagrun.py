@@ -16,4 +16,6 @@ typecheck:
 .PHONY: git-push
 git-push:
 	git push origin
+	git push --tags origin
 	git push github-mirror
+	git push --tags github-mirror
