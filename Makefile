@@ -8,3 +8,7 @@ build:
 
 typecheck:
 	.venv/bin/mypy
+
+push-git:
+	git push origin
+	git push github-mirror
